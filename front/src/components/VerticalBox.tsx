@@ -1,6 +1,5 @@
-import React from 'react'
 
-function VerticalBox({titles ,listitems,image,widths}) {
+function VerticalBox({titles, listitems, image, widths}: {titles: string, listitems: string[], image: string, widths: number}) {
   return (
     <div className='  text-left flex flex-row h-full'>
         <div className=' mr-4 lg:block hidden'>

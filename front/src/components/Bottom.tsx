@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import smart from "../../public/glass-kid.svg";
 import VerticalBox from "./VerticalBox";
 import one from "../../public/vbox/1.svg";

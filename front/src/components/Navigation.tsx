@@ -1,19 +1,25 @@
-import React, { MouseEvent, useState, useEffect, useRef } from "react";
-import { NavLink } from "react-router-dom";
+
+
 import logo from "../../public/navlogo.png";
 import cookie from "../../public/cookie.svg";
 import telephone from "../../public/telephone.svg";
 import { useNavigate } from "react-router-dom";
-const Navigation = ({ user }) => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+interface User {
+  id: number;
+  name: string;
+  password: string;
+ 
+}
+const Navigation = ({ user }:{user:User}) => {
+
   const navigate = useNavigate();
 
-  const logout = (e: MouseEvent) => {
+  const logout = () => {
     localStorage.removeItem("user");
     window.location.reload();
   };
 
-  const login = (e: MouseEvent) => {
+  const login = () => {
     navigate("/login");
   };
 

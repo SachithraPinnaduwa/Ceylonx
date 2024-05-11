@@ -1,6 +1,6 @@
-import React from 'react'
 
-function Box({colour, headings, lists, maxWordsPerRow, image}) {
+function Box({colour, headings, lists, maxWordsPerRow, image}:
+   {colour: string[], headings: string, lists: string[], maxWordsPerRow: number, image: string}) {
   const listItemStyle = {
     maxWidth: `${maxWordsPerRow * 100}ch`, 
     overflowWrap: 'break-word',

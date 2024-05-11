@@ -1,4 +1,4 @@
-import React from "react";
+
 import Box from "./Box";
 import image from "../../public/master-banner.svg";
 import one from "../../public/boxes/one.png";

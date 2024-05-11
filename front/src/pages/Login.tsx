@@ -1,4 +1,4 @@
-import React, { MouseEvent } from "react";
+
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { useState } from "react";
@@ -35,8 +35,7 @@ function Login() {
         console.log("Login failed:");
         alert("Login failed. Please check your credentials and try again.");
       }
-    } catch (error: any) {
-      
+    } catch (error) {
       console.error("Server error:", error.message);
     }
   };

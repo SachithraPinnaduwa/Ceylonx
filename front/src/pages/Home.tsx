@@ -5,8 +5,13 @@ import Top from '../components/Top';
 import Middle from '../components/Middle';
 import Bottom from '../components/Bottom';
 import Footer from '../components/Footer';
-
-function Home({ user }) {
+interface User {
+  id: number;
+  name: string;
+  password: string;
+ 
+}
+function Home({ user }: { user: User }) {
  
 
   return (
