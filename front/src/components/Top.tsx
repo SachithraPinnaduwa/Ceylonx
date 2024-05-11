@@ -3,8 +3,8 @@ import superkid from "../../public/super-kid.svg"
 
 function Top() {
   return (
-    <section className="bg-white  min-h-screen my-auto">
-        <div style={{ position: 'absolute', top: '13.5%', left: '21%', transform: 'translate(-50%, -50%)' }}>
+    <section className="bg-white   my-auto">
+        <div style={{ position: 'absolute', top: '13.5%', left: '21%', transform: 'translate(-50%, -50%)' }} className="lg:block hidden">
         <svg width="67" height="23" viewBox="0 0 67 23" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M10.4897 5.8623L1.07971 17.6513L14.7897 10.7207L66.1997 11.3929L10.4897 5.8623Z" fill="#002C44"/>
 <path d="M1.36971 0.498535C1.36971 0.498535 11.8097 4.67544 10.3897 6.00129L65.7097 11.2584C65.6997 11.2584 39.0897 2.60785 1.36971 0.498535Z" fill="#FF7B3A"/>
@@ -13,7 +13,7 @@ function Top() {
 </svg>
 
 </div>
-<div style={{ position: 'absolute', top: '20%', left: '10%', transform: 'translate(-50%, -50%)' }}>
+<div style={{ position: 'absolute', top: '20%', left: '10%', transform: 'translate(-50%, -50%)' }} className="lg:block hidden">
 <svg width="253" height="93" viewBox="0 0 253 93" fill="none" xmlns="http://www.w3.org/2000/svg">
 
 <path d="M2 65.7633C2.82 78.433 26.39 89.9856 53.67 90.8479C80.95 91.7101 107.88 81.5576 111.15 68.9713C111.96 65.8421 111.36 62.4857 107.62 59.8525C103.88 57.2194 96.4 55.569 90.01 56.6584C82.81 57.8823 79.65 62.1936 82.06 65.5685C84.48 68.9434 91.13 71.3541 98.28 72.6429C113.43 75.3734 131.91 73.5422 143.32 68.1739C156.16 62.1287 159.03 53.0981 163.88 44.9205C174.51 26.9704 192.45 -0.830793 250.98 1.63548" stroke="#FBCD5F" strokeWidth="3" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" strokeDasharray="8 8"/>
@@ -23,10 +23,10 @@ function Top() {
 
 </div>
 
-    <div className="grid px-4 py-8 mx-[6rem] md:grid-cols-2 grid-cols-1">
-        <div className="flex flex-col justify-center">
-            <h1 className="max-w-2xl mb-4 text-5xl font-bold tracking-tight leading-none">Making Kids Fall in Love with Math!</h1>
-            <p className="max-w-2xl mb-4 font-semibold text-black text-[16px] mt-[4rem]">BOOK YOUR FREE CLASS WITH AGE GROUP</p>
+    <div className="grid px-4 py-8 lg:mx-[6rem] mx-0 lg:grid-cols-2 grid-cols-1">
+        <div className="flex flex-col justify-center items-center lg:items-start">
+            <h1 className=" mb-4 text-5xl font-bold tracking-tight leading-none text-center lg:text-left">Making Kids Fall in Love with Math!</h1>
+            <p className=" mb-4 font-semibold text-black text-[16px] mt-[4rem] text-center lg:text-left">BOOK YOUR FREE CLASS WITH AGE GROUP</p>
             <div className="w-[80%]">
             <div className="grid grid-cols-4 gap-x-4 gap-y-6">
                 <AgeButton age={3} />
@@ -51,7 +51,7 @@ function Top() {
             </div>
             </div>
         </div>
-        <div className="pt-10 md:pt-0">
+        <div className="pt-10 md:pt-0 lg:block hidden">
             <img src={superkid} alt="mockup" />
         </div>                
     </div>

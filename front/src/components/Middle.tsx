@@ -37,7 +37,7 @@ function Middle() {
         The guaranteed formula to be a Math wizard
       </h2>
       <div className="flex flex-col lg:flex-row items-center mt-8">
-        <div className="lg:absolute lg:grid lg:grid-cols-4 lg:gap-x-8 lg:w-full">
+        <div className="lg:absolute lg:grid lg:grid-cols-4 lg:gap-x-8 lg:w-full relative">
           <Box colour={["bg-pink-100", "text-pink-500"]} headings={headings[0]} lists={lists[0]} maxWordsPerRow={3} image={one}/>
           <Box colour={["bg-yellow-100", "text-yellow-400"]} headings={headings[1]} lists={lists[1]} maxWordsPerRow={3} image={two}/>
           <Box colour={["bg-blue-100", "text-blue-400"]} headings={headings[2]} lists={lists[2]} maxWordsPerRow={3} image={three}/>

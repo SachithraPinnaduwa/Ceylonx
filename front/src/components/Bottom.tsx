@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import smart from "../../public/glass-kid.svg";
 import VerticalBox from "./VerticalBox";
 import one from "../../public/vbox/1.svg";
 import two from "../../public/vbox/2.svg";
 import three from "../../public/vbox/3.svg";
 import four from "../../public/vbox/4.svg";
+
 function Bottom() {
   const titles = [
     "Number Sense and Operations",
@@ -29,9 +30,12 @@ function Bottom() {
       "Measure by iterating length units ",
     ],
   ];
-  const widths = [120, 130, 140, 120]
+  const widths = [120, 130, 140, 120];
+
+  const [activeButton, setActiveButton] = useState("S2");
+
   return (
-    <div className="relative text-center py-4 min-h-screen mx-[6rem]">
+    <div className="relative text-center py-4 min-h-screen lg:mx-[6rem] mx-0">
       <h1 className="text-[48px] font-bold">
         Cultivate thinking skills from all aspects
       </h1>
@@ -43,7 +47,10 @@ function Bottom() {
       <div className="inline-flex rounded-md shadow-sm mt-10 mb-4" role="group">
         <button
           type="button"
-          className="px-4 py-2 text-sm font-medium text-orange-500 bg-white border border-gray-200 rounded-s-2xl "
+          className={`px-4 py-2 text-sm font-medium ${
+            activeButton === "S2" ? "text-white bg-orange-500" : "text-orange-500 bg-white"
+          } border border-gray-200 rounded-s-2xl`}
+          onClick={() => setActiveButton("S2")}
         >
           S2
           <br />
@@ -51,15 +58,21 @@ function Bottom() {
         </button>
         <button
           type="button"
-          className="px-4 py-2 text-sm font-medium  bg-orange-500 border-t border-b border-gray-200 "
+          className={`px-4 py-2 text-sm font-medium ${
+            activeButton === "S3" ? "text-white bg-orange-500" : "text-orange-500 bg-white"
+          } border-t border-b border-gray-200`}
+          onClick={() => setActiveButton("S3")}
         >
-          <span className=" text-white">S3</span>
+          <span className=" ">S3</span>
           <br />
-          <span className="text-gray-200">5 Years Old</span>
+          <span className="">5 Years Old</span>
         </button>
         <button
           type="button"
-          className="px-4 py-2 text-sm font-medium text-orange-500 bg-white border border-gray-200 rounded-e-2xl "
+          className={`px-4 py-2 text-sm font-medium ${
+            activeButton === "S4" ? "text-white bg-orange-500" : "text-orange-500 bg-white"
+          } border border-gray-200 rounded-e-2xl`}
+          onClick={() => setActiveButton("S4")}
         >
           S4
           <br />
@@ -68,7 +81,7 @@ function Bottom() {
       </div>
 
       <div className=" bg-gradient-to-r from-[#FEF5DB] to-[#FFDFDF] rounded-tl-[10rem] rounded-2xl flex flex-row p-10 mx-20 mb-20">
-        <div className="p-10 flex justify-center items-center">
+        <div className="p-10 lg:flex justify-center items-center hidden">
           <img src={smart} alt="image" width={400} />
         </div>
         <div className=" mx-auto justify-center items-center">
@@ -83,7 +96,7 @@ function Bottom() {
               titles={titles[1]}
               listitems={listitems[1]}
               image={two}
-                widths={widths[1]}
+              widths={widths[1]}
             />
             <VerticalBox
               titles={titles[2]}
@@ -95,7 +108,7 @@ function Bottom() {
               titles={titles[3]}
               listitems={listitems[3]}
               image={four}
-                widths={widths[3]}
+              widths={widths[3]}
             />
           </ul>
         </div>

@@ -3,7 +3,7 @@ import React from 'react'
 function VerticalBox({titles ,listitems,image,widths}) {
   return (
     <div className='  text-left flex flex-row h-full'>
-        <div className=' mr-4'>
+        <div className=' mr-4 lg:block hidden'>
             <img src={image} alt="" width={widths} />
         </div>
         <div>
